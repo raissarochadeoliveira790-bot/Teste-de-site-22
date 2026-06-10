@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Rosa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Fundo rosa suave e moderno */
+            background-color: #ffc0cb; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Desenho de uma flor estilizada usando apenas código CSS */
+        .flower {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px auto;
+            animation: spin 20s linear infinite;
+        }
+
+        /* Miolo da flor */
+        .flower::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #ffdb58; /* Amarelo */
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Pétalas vermelhas */
+        .petal {
+            position: absolute;
+            background: #e60026; /* Vermelho vibrante */
+            border-radius: 50%;
+            width: 50px;
+            height: 80px;
+            top: 35px;
+            left: 50px;
+            transform-origin: center center;
+            opacity: 0.95;
+        }
+
+        .p1 { transform: rotate(0deg) translateY(-35px); }
+        .p2 { transform: rotate(45deg) translateY(-35px); }
+        .p3 { transform: rotate(90deg) translateY(-35px); }
+        .p4 { transform: rotate(135deg) translateY(-35px); }
+        .p5 { transform: rotate(180deg) translateY(-35px); }
+        .p6 { transform: rotate(225deg) translateY(-35px); }
+        .p7 { transform: rotate(270deg) translateY(-35px); }
+        .p8 { transform: rotate(315deg) translateY(-35px); }
+
+        /* Animação para a flor girar bem devagar */
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            color: #4a000e;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="flower">
+            <div class="petal p1"></div>
+            <div class="petal p2"></div>
+            <div class="petal p3"></div>
+            <div class="petal p4"></div>
+            <div class="petal p5"></div>
+            <div class="petal p6"></div>
+            <div class="petal p7"></div>
+            <div class="petal p8"></div>
+        </div>
+        <h1>Bem-vindo ao meu site!</h1>
+    </div>
+
+</body>
+</html>
